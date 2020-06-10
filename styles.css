@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+body {
+  background-color: #3f3f44;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.title-div {
+  margin: 1vw auto 3vw auto;
+}
+
+.title {
+  size: 20vw;
+  font-weight: 900;
+}
+
+.para {
+  font-family: "Montserrat", sans-serif;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10vw;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30vw;
+  height: 30vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 10vw;
+  height: 10vw;
+  background-color: #cceabb;
+  border: 1px solid #708160;
+}
+
+.mole {
+  background-image: url("mole.jpg");
+  background-size: cover;
+}
+
+.score-div {
+  position: relative;
+  bottom: 30vw;
+}
+
+.mole-css {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 38vw;
+  z-index: -1;
+}
+
+.outer-head {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 50% 50% 0 0;
+  background-color: #918675;
+  position: relative;
+}
+
+.inner-head {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50% 50% 0 0;
+  position: absolute;
+  top: 8vw;
+  left: 5vw;
+  background-color: beige;
+}
+
+.eyes-div {
+  display: flex;
+  position: relative;
+  top: 8vw;
+  z-index: 1;
+}
+
+.left-eye,
+.right-eye {
+  width: 2vw;
+  height: 4vw;
+  border-radius: 100%;
+  background-color: #000;
+  margin: 0 2vw;
+}
+
+.pupil {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes eyesMove {
+  0% {
+    left: 2.5vw;
+  }
+  50% {
+    left: 2.8vw;
+  }
+  80% {
+    left: 2.4vw;
+  }
+  100% {
+    left: 2.5vw;
+  }
+}
+
+@keyframes eyesMove2 {
+  0% {
+    right: 2.5vw;
+  }
+  50% {
+    right: 2.2vw;
+  }
+  80% {
+    right: 2.8vw;
+  }
+  100% {
+    right: 2.5vw;
+  }
+}
+
+.left-eye .pupil {
+  left: 2.5vw;
+  animation: eyesMove 3s linear infinite both;
+}
+
+.right-eye .pupil {
+  right: 2.5vw;
+  animation: eyesMove2 3s linear infinite both;
+}
+
+.nose {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 40% 40% 50% 50%;
+  background-color: #000;
+  position: relative;
+  top: 15vw;
+  z-index: 1;
+  background-image: linear-gradient(to top, #8b473b, #b2535d);
+}
+
+.left-hand,
+.right-hand {
+  display: flex;
+  position: relative;
+  bottom: 60vw;
+}
+
+.fingers {
+  width: 3vw;
+  height: 5vw;
+  border-radius: 100%;
+  background-color: beige;
+}
+
+.fingers .left-hand {
+  bottom: 60vw;
+  right: 10vw;
+}
+
+.fingers .right-hand {
+  bottom: 60vw;
+  left: 10vw;
+}
